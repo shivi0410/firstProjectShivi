@@ -22,7 +22,7 @@ public class SingletonDriver {
 	
 	private static SingletonDriver driverInstance = null;
 	
-	public static SingletonDriver getThisClassInstance() {
+	public static SingletonDriver getThisClassInstance() {         //creating & returning driver instance
 		
 		if(driverInstance == null) {
 			
@@ -31,7 +31,7 @@ public class SingletonDriver {
 		return driverInstance;
 		
 	}
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return driver;
 	}
 	
