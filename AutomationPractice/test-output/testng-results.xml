@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10592" started-at="2020-07-28T22:37:32 EDT" finished-at="2020-07-28T22:37:43 EDT">
+  <suite name="Default suite" duration-ms="12737" started-at="2020-08-11T22:25:02 EDT" finished-at="2020-08-11T22:25:15 EDT">
     <groups>
+      <group name="Regression">
+        <method signature="ReadPropFile.multipleElementCheck()[pri:3, instance:test.ReadPropFile@23faf8f2]" name="multipleElementCheck" class="test.ReadPropFile"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="ReadPropFile.multipleElementCheck()[pri:3, instance:test.ReadPropFile@23faf8f2]" name="multipleElementCheck" class="test.ReadPropFile"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test name="Default test" duration-ms="10592" started-at="2020-07-28T22:37:32 EDT" finished-at="2020-07-28T22:37:43 EDT">
-      <class name="test.TestClass">
-        <test-method status="PASS" signature="testing1()[pri:0, instance:test.TestClass@3b084709]" name="testing1" duration-ms="10520" started-at="2020-07-28T22:37:32 EDT" finished-at="2020-07-28T22:37:43 EDT">
+    <test name="Default test" duration-ms="12737" started-at="2020-08-11T22:25:02 EDT" finished-at="2020-08-11T22:25:15 EDT">
+      <class name="test.ReadPropFile">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.ReadPropFile@23faf8f2]" name="setup" is-config="true" duration-ms="9317" started-at="2020-08-11T22:25:02 EDT" finished-at="2020-08-11T22:25:11 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing1 -->
-      </class> <!-- test.TestClass -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="multipleElementCheck()[pri:3, instance:test.ReadPropFile@23faf8f2]" name="multipleElementCheck" duration-ms="2678" started-at="2020-08-11T22:25:11 EDT" finished-at="2020-08-11T22:25:14 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multipleElementCheck -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.ReadPropFile@23faf8f2]" name="tearDown" is-config="true" duration-ms="679" started-at="2020-08-11T22:25:14 EDT" finished-at="2020-08-11T22:25:15 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.ReadPropFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

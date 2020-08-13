@@ -13,34 +13,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class SingletonDriver {
 	
 	public SingletonDriver(WebDriver driver){
-		
-		SingletonDriver.driver = driver;      //because we defined WenDriver as static,therefore we will access it in static way
-		
+		SingletonDriver.driver = driver;      //because we defined WebDriver as static,therefore we will access it in static way
 	}
 	
-	private static WebDriver driver = null;
-	
+	private static WebDriver driver = null ;
 	private static SingletonDriver driverInstance = null;
-	
-	public static SingletonDriver getThisClassInstance() {
-		
+	public static SingletonDriver getThisClassInstance() {         //creating & returning driver instance
 		if(driverInstance == null) {
-			
 			driverInstance = new SingletonDriver(driver);	
 		}
 		return driverInstance;
-		
 	}
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return driver;
 	}
 	
-	public WebDriver openBrowser(String browser, String url) {
+	public WebDriver openSingletonBrowser(String browser, String url) {
 		
 		if(driver == null) {
-			
+	
 			if(browser.equalsIgnoreCase("chrome")) {
-				
 				driver = new ChromeDriver();
 				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
@@ -70,6 +62,36 @@ public class SingletonDriver {
 		}
 		return driver;
 		
+	}
+	
+public WebDriver openBrowser(String browser, String url) {	
+			if(browser.equalsIgnoreCase("chrome")) {
+				driver = new ChromeDriver();
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.manage().window().maximize();
+				driver.get("https://www.google.com/");
+				driver.navigate().to(url);
+			}
+			else if(browser.equalsIgnoreCase("edge")) {
+				
+				driver = new EdgeDriver();
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.manage().window().maximize();
+				driver.get("https://www.google.com/");
+				driver.navigate().to(url);
+			}
+			else if(browser.equalsIgnoreCase("firefox")) {
+				
+				driver = new FirefoxDriver();
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				driver.manage().window().maximize();
+				driver.get("https://www.google.com/");
+				driver.navigate().to(url);
+			}
+			else {
+				System.out.println("Incorrect Driver");
+			}
+		return driver;	
 	}
 
 }
