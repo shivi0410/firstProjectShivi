@@ -49,7 +49,6 @@ public class HomePageTest {
 		//li//li[2]//a[@title = 'Dresses']
 		//ul//li[3]//a[@title = 'T-shirts']
 		assertEquals(uc.getText("//a[@title = 'Contact Us']"), "Contact us");
-		
 	}
 	
 	@Test

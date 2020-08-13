@@ -16,9 +16,9 @@ public class ContactUsPage {
 	}
 
 	@FindBy(xpath = "//h1[@class='page-heading bottom-indent']")
-	public static WebElement contactUsPageTitle;
+	public WebElement contactUsPageTitle;
 		
 	@FindBy(xpath = "//a[@class='login']")
-	public static WebElement signInBtn;
+	public WebElement signInBtn;
 	
 }
