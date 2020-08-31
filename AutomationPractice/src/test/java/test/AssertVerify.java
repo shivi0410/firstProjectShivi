@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 public class AssertVerify {
 	
-	@Test
+	@Test (enabled = false)
 	public void hardAssert()
 	{
 		

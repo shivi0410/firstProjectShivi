@@ -7,12 +7,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.google.common.io.Files;
@@ -196,8 +199,24 @@ public String readPropFile(String key) {
 		
 		driver.findElement(By.xpath("//a[@ title = 'Contact Us']")).click();
 	}
+	public Alert alert()
+	{
+		Alert alert1 = driver.switchTo().alert();
+		return alert1;
+	}
+	public void sendKeys(WebElement element, String text) {
+	element.sendKeys(text + Keys.TAB);
+	}
 	
-
+	public Actions action() {
+		
+		Actions action = new Actions(driver);
+		return action;
+	}
+	public String getWindowId() {
+		
+		return driver.getWindowHandle();
+	}
 }
 
 

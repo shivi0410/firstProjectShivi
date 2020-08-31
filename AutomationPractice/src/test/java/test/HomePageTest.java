@@ -43,7 +43,7 @@ public class HomePageTest {
 		
 	}
 	
-	//@Test
+	@Test
 	public void contactBoxCheck() {
 		//a[@title = 'Women']
 		//li//li[2]//a[@title = 'Dresses']

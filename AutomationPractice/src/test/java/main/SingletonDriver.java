@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 		
 public class SingletonDriver {
 	
-	public SingletonDriver(WebDriver driver){
+	private SingletonDriver(WebDriver driver){
 		SingletonDriver.driver = driver;      //because we defined WebDriver as static,therefore we will access it in static way
 	}
 	
@@ -24,7 +24,7 @@ public class SingletonDriver {
 		}
 		return driverInstance;
 	}
-	public static WebDriver getDriver() {
+	public static WebDriver getDriver() {    //getter
 		return driver;
 	}
 	
