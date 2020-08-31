@@ -16,12 +16,12 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag #tags is use to group scenarios together
-Feature: Title of your feature # feature is a class name
+@tag                                                              #tags is use to group scenarios together
+Feature: Title of your feature                           # feature is a class name
   I want to use this template for my feature file #after feature write decription of it.
 
-  @tag1 #to give group names.
-  Scenario: Title of your scenario #scenario is a test in cucumber
+  @tag1                                                                              #to give group names.
+  Scenario: Title of your scenario                                          #scenario is a test in cucumber
     Given I want to write a step with precondition
     And some other precondition
     When I complete action
@@ -31,7 +31,7 @@ Feature: Title of your feature # feature is a class name
     And check more outcomes
 
   @tag2
-  Scenario Outline: Title of your scenario outline #useful for multiple values
+  Scenario Outline: Title of your scenario outline                         #useful for multiple values
     Given I want to write a step with <name>
     When I check for the <value> in step
     Then I verify the <status> in step
